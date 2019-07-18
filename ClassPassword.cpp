@@ -13,18 +13,15 @@ using namespace std;
 class PASSWORD
 {
 private:
+	string Title;
 	string User;
 	string Pass;
 public:
 	PASSWORD()
 	{
+		Title = "";
 		User = "";
 		Pass = "";
-	}
-	PASSWORD(string user, string pass)
-	{
-		User = user;
-		Pass = pass;
 	}
 	string getUser()
 	{
