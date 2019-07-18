@@ -25,6 +25,33 @@ public:
 		m_Salary = salary;
 		m_Bonus = bonus;
 	}
+	Employee(const Employee&e) :Person(e)
+	{
+		this->m_No = e.m_No;
+		this->m_Position = e.m_Position;
+		this->m_Salary = e.m_Salary;
+		this->m_Bonus = e.m_Bonus;
+	}
+	int getNo()
+	{
+		return m_No;
+	}
+	string getPosition()
+	{
+		return m_Position;
+	}
+	double getSalary()
+	{
+		return m_Salary;
+	}
+	double getBonus()
+	{
+		return m_Bonus;
+	}
+	void decrease1No()
+	{
+		m_No--;
+	}
 };
 
 #endif 
