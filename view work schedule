@@ -1,0 +1,34 @@
+void viewSchedule()
+	{
+
+		cout << setw(25) << left << "User" << "|";
+		cout << setw(25) << left << "Name" << "|";
+		cout << setw(8) << left << "Mon" << "|";
+		cout << setw(8) << left << "Tue" << "|";
+		cout << setw(8) << left << "Wed" << "|";
+		cout << setw(8) << left << "Thu" << "|";
+		cout << setw(8) << left << "Fri" << "|";
+		cout << setw(8) << left << "Sat" << "|";
+		cout << setw(8) << left << "Sun" << endl;
+		cout << setfill('-');
+		cout << setw(115) << "-" << endl;
+		cout << setfill(' ');
+		for (int i = 0; i < schedule.size(); i++)
+		{
+			for (int j = 0; j < schedule[0].size(); j++)
+			{
+				if (j == 0 || j == 1)
+				{
+					cout << setw(25) << left << schedule[i][j] << "|";
+				}
+				else if (j == schedule[0].size() - 1)
+				{
+					cout << setw(8) << left << schedule[i][j] << endl;
+				}
+				else
+				{
+					cout << setw(8) << left << schedule[i][j] << "|";
+				}
+			}
+		}
+	}
