@@ -1,0 +1,8 @@
+void viewScheduleFull()
+	{
+		cout << "No,Last Name,First Name,Gender,Phone,DOB,DOE" << endl;
+		for (int i = 0; i < Schedule.size(); i++)
+		{
+				cout << Schedule[i].no << "," << Schedule[i].lastname << "," << Schedule[i].firstname << "," << Schedule[i].gender << "," << Schedule[i].phone << "," << Schedule[i].dob << "," << Schedule[i].day << "/" << Schedule[i].month << "/" << Schedule[i].year << endl;
+		}
+	}
