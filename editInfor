@@ -1,0 +1,132 @@
+	void edit()
+	{
+			string a;
+			int b = 0;
+			int c = 0;
+			int check = 0;
+			do
+			{
+				cout << "Enter the name of the medicine you want to edit: ";
+				getline(cin, a);
+				for (int i = 0; i < mdc.size(); i++)
+				{
+					if (a == mdc[i].getName())
+					{
+						check = 1;
+						do
+						{
+							cout << endl;
+							cout << "  1: Edit Name" << endl;
+							cout << "  2: Edit Form" << endl;
+							cout << "  3: Edit Price" << endl;
+							cout << "  4: Edit Status" << endl;
+							cout << "\nSelect: ";
+							cin >> b;
+							cin.get();
+							switch (b)
+							{
+							case 1:
+							{
+								string name = "";
+								string temp = "";
+								cout << "New Name: ";
+								getline(cin, name);
+								if (mdc[i].editName(name))
+								{
+									cout << "Edit a Name successfull!!!" << endl;
+									cout << "Would you like to continue editing?(yes/no): ";
+									getline(cin, temp);
+									if (temp == "yes")
+									{
+										c = 1;
+										break;
+									}
+									else
+									{
+										c = 0;
+										break;
+									}
+								}
+							}
+							case 2:
+							{
+								string form = "";
+								string temp = "";
+								cout << "New Form: ";
+								getline(cin, form);
+								if (mdc[i].editForm(form))
+								{
+									cout << "Edit a Form successfull!!!" << endl;
+									cout << "Would you like to continue editing?(yes/no): ";
+									getline(cin, temp);
+									if (temp == "yes")
+									{
+										c = 1;
+										break;
+									}
+									else
+									{
+										c = 0;
+										break;
+									}
+								}
+							}
+							case 3:
+							{
+								float price = 0;
+								string temp = "";
+								cout << "New Price: ";
+								cin >> price;
+								cin.get();
+								if (mdc[i].editPrice(price))
+								{
+									cout << "Edit a Price successfull!!!" << endl;
+									cout << "Would you like to continue editing?(yes/no): ";
+									getline(cin, temp);
+									if (temp == "yes")
+									{
+										c = 1;
+										break;
+									}
+									else
+									{
+										c = 0;
+										break;
+									}
+								}
+
+							}
+							case 4:
+							{
+								int status = 0;
+								string temp = "";
+								cout << "New Status: ";
+								cin >> status;
+								cin.get();
+								if (mdc[i].editStatus(status))
+								{
+									cout << "Edit a Status successfull!!!" << endl;
+									cout << "Would you like to continue editing?(yes/no): ";
+									getline(cin, temp);
+									if (temp == "yes")
+									{
+										c = 1;
+										break;
+									}
+									else
+									{
+										c = 0;
+										break;
+									}
+								}
+
+							}
+							default:
+								break;
+							}
+						} while (c == 1);
+						saveMedicine();
+					}
+				}
+			}while (check != 1 && cout << "Not found, please re-enter" << endl);
+	}
