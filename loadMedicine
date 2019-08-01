@@ -1,0 +1,27 @@
+	bool loadMedicine()
+	{
+		ifstream fin;
+		fin.open("MedicineInformation.csv");
+		if (!fin.is_open())
+			return false;
+		string a;
+		MEDICINE md;
+		int i = 0;
+		getline(fin, a, '\n');
+		while (!fin.eof())
+		{
+			fin >> md.No;
+			fin.get();
+			getline(fin, md.Name, ',');
+			getline(fin, md.Form, ',');
+			fin >> md.Price;
+			fin.get();
+			fin >> md.Status;
+			fin.get();
+			fin >> md.Sold;
+			fin.get();
+			mdc.push_back(md);
+		}
+		fin.close();
+		return true;
+	}
