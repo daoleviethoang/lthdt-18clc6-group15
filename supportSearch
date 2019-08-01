@@ -1,0 +1,13 @@
+	void supportSeach(int i)
+	{
+		cout << CusBuy[i].no << ","
+			<< CusBuy[i].lastname << ","
+			<< CusBuy[i].firstname << ","
+			<< CusBuy[i].gender << ","
+			<< CusBuy[i].phone << ","
+			<< CusBuy[i].dob << ","
+			<< CusBuy[i].address << ","
+			<< CusBuy[i].job << ","
+			<< CusBuy[i].status << ","
+			<< CusBuy[i].day << "/" << CusBuy[i].month << "/" << CusBuy[i].year << endl;
+	}
