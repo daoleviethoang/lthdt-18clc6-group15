@@ -1,0 +1,14 @@
+void deleteEmployee()
+	{
+		cout << "DELETE EMPLOYEE" << endl;
+		this->viewEmployee();
+		int no;
+		do
+		{
+			cout << "Choose a employee to delete(1-" << getNumEm() << "): ";
+			cin >> no;
+		} while ((no <= 0 || no > getNumEm()) && cout << "The pharmacy only have " << getNumEm() << " please try again!!" << endl);
+		deleteEmployee1(no);
+		saveEMP();
+		cout << "You have delete the employee at no: " << no << "successfully!!" << endl;
+	}
