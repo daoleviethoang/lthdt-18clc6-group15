@@ -1,0 +1,21 @@
+	void view()
+	{
+		Customer.clear();
+		loadCustomer();
+		cout << "No,Last Name,First Name,Gender,Phone,DOB,Address,Job,Status,Last Check,Note" << endl;
+		for (int i = 0; i < Customer.size(); i++)
+		{
+			cout << Customer[i].no << ","
+				<< Customer[i].lastname << ","
+				<< Customer[i].firstname << ","
+				<< Customer[i].gender << ","
+				<< Customer[i].phone << ","
+				<< Customer[i].dob << ","
+				<< Customer[i].address << ","
+				<< Customer[i].job << ","
+				<< Customer[i].status << ","
+				<< Customer[i].lastcheck << ","
+				<< Customer[i].note << endl;
+		}
+		Customer.clear();
+	}
