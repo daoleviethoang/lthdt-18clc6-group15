@@ -1,0 +1,35 @@
+	void viewEmployee()
+	{
+		cout << setw(3) << left << "No";
+		cout << setw(25) << left << "Last Name";
+		cout << setw(10) << left << "Name";
+		cout << setw(10) << left << "Phone";
+		cout << setw(13) << left << "ID";
+		cout << setw(11) << left << "DOB";
+		cout << setw(10) << left << "Gender";
+		cout << setw(15) << left << "Position";
+		cout << setw(10) << left << "Salary";
+		cout << setw(10) << left << "Bonus" << endl;
+		cout << setfill('-');
+		cout << setw(115) << "-" << endl;
+		viewAllEmployee();
+	}
+  
+  	void viewAllEmployee()
+	{
+		for (int i = 0; i < employee.size(); i++)
+		{
+			cout << setfill(' ');
+			cout << setw(3) << left << employee[i].No << "|";
+			cout << setw(24) << left << employee[i].LastName;
+			cout << setw(9) << left << employee[i].FirstName << "|";
+			cout << setw(9) << left << employee[i].Phone << "|";
+			cout << setw(12) << left << employee[i].ID << "|";
+			cout << setw(10) << right << employee[i].DOB << "|";
+			cout << setw(9) << left << employee[i].Gender << "|";
+			cout << setw(14) << left << employee[i].Position << "|";
+			cout.precision(20);
+			cout << setw(9) << left << employee[i].Salary << "|";
+			cout << setw(9) << left << employee[i].Bonus << endl;
+		}
+	}
