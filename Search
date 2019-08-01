@@ -1,0 +1,44 @@
+	void Seach()
+	{
+		getDateMyPC();
+		int select;
+		cout << " Seach:" << endl;
+		cout << "   1: Day" << endl;
+		cout << "   2: Month" << endl;
+		cout << "   3: Year" << endl;
+		do
+		{
+			cout << "Seclect: ";
+			cin >> select;
+		} while ((select < 1 || select > 3) && cout << "Please, reselect" << endl);
+		if (select == 1)
+		{
+			for (int i = 0; i < CusBuy.size(); i++)
+			{
+				if (CusBuy[i].day == getDay() && CusBuy[i].month == getMonth() && CusBuy[i].year == getYear())
+				{
+					supportSeach(i);
+				}
+			}
+		}
+		else if (select == 2)
+		{
+			for (int i = 0; i < CusBuy.size(); i++)
+			{
+				if (CusBuy[i].month == getMonth() && CusBuy[i].year == getYear())
+				{
+					supportSeach(i);
+				}
+			}
+		}
+		else
+		{
+			for (int i = 0; i < CusBuy.size(); i++)
+			{
+				if (CusBuy[i].year == getYear())
+				{
+					supportSeach(i);
+				}
+			}
+		}
+	}
