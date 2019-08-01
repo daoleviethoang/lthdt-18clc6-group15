@@ -1,0 +1,23 @@
+void add()
+	{
+			MEDICINE md;
+			int a = mdc.size();
+			md.No = a++;
+			cout << "Enter Name: ";
+			getline(cin, md.Name);
+			cout << "Enter Form: ";
+			getline(cin, md.Form);
+			do
+			{
+				cout << "Enter Price: ";
+				cin >> md.Price;
+			} while (md.Price < 0);
+			do
+			{
+				cout << "Enter Status: ";
+				cin >> md.Status;
+			} while (md.Status < 0);
+			md.Sold = 0;
+			mdc.push_back(md);
+			saveMedicine();
+	}
